@@ -14,7 +14,7 @@ translateCommand = ["./SysResCollector", "read", "Dock_TrainingT1.bin", "Dock_Tr
 new_learning_rate = [0.005, 0.01, 0.05, 0.1, 0.5]
 new_node_size = [32, 64, 128, 256, 512]
 
-for new_batch_size in range(1,100000):
+for new_batch_size in range(1,100001,1000):
     if (hasattr(file, 'batch_size')):
         setattr(file, 'batch_size', new_batch_size)
         #run NN and syscollector
